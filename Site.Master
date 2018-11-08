@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ProjectMMS.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Municiplaity Management System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!-- CuFon: Enables smooth pretty custom font rendering. 100% SEO friendly. To disable, remove this section -->
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<!-- CuFon ends -->
+
+
+<!--    <asp:PlaceHolder runat="server">
+      <%: Scripts.Render("~/bundles/modernizr") %> 
+    </asp:PlaceHolder>
+    -->
+    
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 711px;
+        }
+    </style>
+        <div class="header">
+    <div class="header_resize">
+      <div class="logo"><h1><a href="Default.aspx"><span>Kottayam</span>Municiplaity<br /><small>Government of Kerala</small></a></h1></div>
+      <div class="clr"></div>
+  
+      <div class="header_text_bg">
+      <div class="menu">
+        <ul class="auto-style1">
+          <li><a href="/Default.aspx">Home</a></li>
+          <li><a href="/intro.aspx">Introduction</a></li>
+          <li><a href="/rti.aspx">Right To Information</a></li>
+          <li><a href="/gallery.aspx">Image Gallery</a></li>
+          <li><a href="/Contact.aspx"> Contact Us</a></li>
+          <li><a href="/Login.aspx" runat="server" id="l1">Login</a></li>
+          <li><a href="/Logout.aspx" runat="server" id="l2"> Logout</a></li>
+          
+        </ul>
+      </div>
+  <!--    <div class="search">
+        <form id="form1" name="form1" method="post" action="">
+          <span>
+          <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+          </span>
+          <input name="b" type="image" src="images/search.gif" class="button" />
+        </form>
+      </div> -->
+      <div class="clr"></div>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <table style="width: 100%; background-image: url('/images/222.gif');">
+            <tr>
+                <td style="width: 5px;"></td>
+                <td>
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                </td>
+                <td style="width: 5px;"></td>
+             </tr>
+        </table>
+      
+            <hr />
+        </form>
+    <footer>
+                <p style="color: #000000; font-style: italic">&copy; <%: DateTime.Now.Year %> - Kottayam Municiplaity</p>
+    </footer>
+</body>
+</html>
